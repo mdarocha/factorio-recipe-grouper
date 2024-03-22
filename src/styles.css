@@ -13,3 +13,55 @@
     transform: scale(0.5);
     transform-origin: 0 0;
 }
+
+ul.item-list, ul.item-grid {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+:is(ul.item-list, ul.item-grid) li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 4px;
+}
+
+ul.item-grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 4px;
+}
+
+li.item-selectable:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+li.item-hover-label {
+    position: relative;
+}
+
+li.item-hover-label .item-label {
+    display: none;
+    position: absolute;
+    bottom: -1rem;
+    right: -100px;
+
+    width: 100px;
+
+    background-color: black;
+    color: white;
+    z-index: 99999;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    pointer-events: none;
+}
+
+li.item-hover-label:hover .item-label {
+    display: block;
+}

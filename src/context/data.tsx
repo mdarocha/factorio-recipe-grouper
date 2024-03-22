@@ -1,5 +1,5 @@
-import { createContext, type ComponentChildren } from "preact";
-import { useState, useEffect } from "preact/hooks";
+import { type ComponentChildren, createContext } from "preact";
+import { useEffect, useState } from "preact/hooks";
 
 export interface DataType {
     version: { base: string };
@@ -31,7 +31,7 @@ export interface DataType {
     }[];
 }
 
-export const Data = createContext<DataType>('data');
+export const Data = createContext<DataType>("data");
 
 export function DataProvider({ children }: { children: ComponentChildren }) {
     const [data, setData] = useState(null);
@@ -40,8 +40,10 @@ export function DataProvider({ children }: { children: ComponentChildren }) {
         setData(await result.json());
     }, []);
 
-    return <Data.Provider value={data}>
-        {data && children}
-        {!data && <span>Loading...</span>}
-    </Data.Provider>;
+    return (
+        <Data.Provider value={data}>
+            {data && children}
+            {!data && <span>Loading...</span>}
+        </Data.Provider>
+    );
 }
