@@ -1,4 +1,4 @@
-import { useContext, useState } from "preact/hooks";
+import { useContext, useState, useMemo } from "preact/hooks";
 import { Data, type DataType } from "./context/data.tsx";
 import { ItemIcon } from "./ItemIcon.tsx";
 import { OutputList } from "./OutputList.tsx";
@@ -51,13 +51,13 @@ function SelectedList({ list, onRemove }: { list: DataType["items"], onRemove: (
 export function InputSelector() {
     const data = useContext(Data);
     const [items, setItems] = useState<DataType["items"]>([]);
+    const result = useMemo(() => calculate(items, data.recipes.filter(recipe => recipe.category !== "technology")), [items, data]);
 
     return (
         <>
             <h5>Select inputs</h5>
             <button popovertarget="input-selector-popover">+ Add</button>
             <SelectorPopover onClick={(item) => {
-                console.log(item);
                 if (items.find(i => i.id === item.id)) {
                     return;
                 }
@@ -69,7 +69,28 @@ export function InputSelector() {
             }} />
             <hr />
             {items.length === 0 && <i>Select inputs to see recipes</i>}
-            {items.length > 0 && <OutputList recipes={calculate(items, data.recipes)} />}
+            {items.length > 0 && <>
+                <span>Intermediate items needed:</span>
+                    <ul class="item-list">
+                        {Object.keys(result.intermediates)
+                            .sort((a, b) => result.intermediates[b] - result.intermediates[a])
+                            .map((id) => {
+                                const icon = data.icons.find((icon) => icon.id === id);
+                                return (
+                                    <li key={id}>
+                                        {icon && <ItemIcon icon={icon} />}
+                                        <span>x {result.intermediates[id]}</span>
+                                    </li>
+                                )})
+                        }
+                    </ul>
+                <hr />
+                <span>Matched recipes ({result.matched.length}):</span>
+                <OutputList recipes={result.matched} />
+                <hr />
+                <span>Unmatched recipes ({result.unmatched.length}):</span>
+                <OutputList recipes={result.unmatched} />
+            </>}
         </>
     );
 }

@@ -16,6 +16,15 @@ export function OutputList({ recipes }: { recipes: DataType["recipes"] }) {
                     <li>
                         {recipe.icon && <ItemIcon icon={recipe.icon} />}
                         <span class="item-label">{recipe.name}</span>
+                        <span class="recipe-inputs">
+                            {Object.keys(recipe.in)
+                                .map((id) => data.icons.find((icon) => icon.id === id))
+                                .map((icon, i) => (<>
+                                    {i !== 0 && <>+</>}
+                                    {!icon && <>No icon</>}
+                                    {icon && <ItemIcon icon={icon} />}
+                                </>))}
+                        </span>
                     </li>
                 ))}
         </ul>

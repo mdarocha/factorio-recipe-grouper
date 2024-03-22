@@ -6,7 +6,7 @@
 .item-icon::before {
     content: "";
     display: block;
-    background-image: url("https://factoriolab.github.io/data/1.1/icons.webp");
+    background-image: url("/icons.webp");
     background-position: var(--icon-position);
     width: 64px;
     height: 64px;
@@ -64,4 +64,12 @@ li.item-hover-label .item-label {
 
 li.item-hover-label:hover .item-label {
     display: block;
+}
+
+.recipe-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
 }

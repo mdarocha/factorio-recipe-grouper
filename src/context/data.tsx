@@ -36,7 +36,7 @@ export const Data = createContext<DataType>("data");
 export function DataProvider({ children }: { children: ComponentChildren }) {
     const [data, setData] = useState(null);
     useEffect(async () => {
-        const result = await fetch("https://factoriolab.github.io/data/1.1/data.json");
+        const result = await fetch("/data.json");
         setData(await result.json());
     }, []);
 
