@@ -4,11 +4,18 @@
     "https://deno.land/x/deno_dom/deno-dom-wasm.ts": "https://deno.land/x/deno_dom@v0.1.45/deno-dom-wasm.ts"
   },
   "remote": {
+    "https://cdn.skypack.dev/-/preact@v10.20.0-i7gwbtzgiej4DdzLAbfA/dist=es2019,mode=imports,min/optimized/preact.js": "b631fda4228a60364a980cda0780ea976819815b6963d1f92a2a23d570ccc6dc",
+    "https://cdn.skypack.dev/-/preact@v10.20.0-i7gwbtzgiej4DdzLAbfA/dist=es2019,mode=imports,min/optimized/preact/hooks.js": "8b58be8d45f2febbcc0bd5a088616c90bb5607c8760c65ee0707c5cb397aee5d",
+    "https://cdn.skypack.dev/-/preact@v10.20.0-i7gwbtzgiej4DdzLAbfA/dist=es2019,mode=imports,min/optimized/preact/jsx-dev-runtime.js": "25b8694e7dd2cc46455d9c25b162a057197faddfa9317f8774cddc21e768f14e",
+    "https://cdn.skypack.dev/-/preact@v10.20.0-i7gwbtzgiej4DdzLAbfA/dist=es2019,mode=imports,min/optimized/preact/jsx-runtime.js": "253a698d5b6226a9648910f0d2e8b1ca71f77878a1039700d78a6742b8e879b1",
     "https://cdn.skypack.dev/-/preact@v10.20.0-i7gwbtzgiej4DdzLAbfA/dist=es2019,mode=imports/optimized/preact.js": "29b5909e6f0790cee84c54ebfd516fe26e23761093dc56c9535caf3c551560ba",
     "https://cdn.skypack.dev/-/preact@v10.20.0-i7gwbtzgiej4DdzLAbfA/dist=es2019,mode=imports/optimized/preact/jsx-dev-runtime.js": "c2a06218e4e4a85d31c9809f7ca6b11eb8e7435bf975d06f3ac9204b7bf4b5ff",
     "https://cdn.skypack.dev/-/preact@v10.20.0-i7gwbtzgiej4DdzLAbfA/dist=es2019,mode=imports/optimized/preact/jsx-runtime.js": "925998d8c7b8005955dd7bd5200bc3a5ee2cac697f1d27c98b08559dbf58bf91",
     "https://cdn.skypack.dev/preact/jsx-runtime?dts": "54c6fbdd69ff08be7d9d2c3bacb80005aa04d1458740c811f88f25abe358fec7",
     "https://cdn.skypack.dev/preact?dts": "5a396086c088a124d402f313f4afb80762c55010e24ca41eacd0ce6e17bb1c2d",
+    "https://cdn.skypack.dev/preact@10.20.0/hooks?dts&min": "97f5862d64128537518f03d29b5a1e86e73ab7cb40def05307b3302e44ab1822",
+    "https://cdn.skypack.dev/preact@10.20.0/jsx-runtime?dts&min": "a0de92b6465506c014bf8892275bda99a51e79e20aca0bca10e9efd88e55f29e",
+    "https://cdn.skypack.dev/preact@10.20.0?dts&min": "858084b800333d3f1377ed0d51fbcb49e7409ffa4a3252c42084eb5a71e074cb",
     "https://deno.land/std@0.140.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",
     "https://deno.land/std@0.140.0/_util/os.ts": "3b4c6e27febd119d36a416d7a97bd3b0251b77c88942c8f16ee5953ea13e2e49",
     "https://deno.land/std@0.140.0/bytes/bytes_list.ts": "67eb118e0b7891d2f389dad4add35856f4ad5faab46318ff99653456c23b025d",

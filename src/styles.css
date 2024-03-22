@@ -1,0 +1,15 @@
+.item-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.item-icon::before {
+    content: "";
+    display: block;
+    background-image: url("https://factoriolab.github.io/data/1.1/icons.webp");
+    background-position: var(--icon-position);
+    width: 64px;
+    height: 64px;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
