@@ -6,7 +6,7 @@
 .item-icon::before {
     content: "";
     display: block;
-    background-image: url("/icons.webp");
+    background-image: url("./icons.webp");
     background-position: var(--icon-position);
     width: 64px;
     height: 64px;
