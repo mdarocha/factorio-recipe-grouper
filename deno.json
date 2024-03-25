@@ -16,6 +16,6 @@
     "exclude": [ "*.json" ]
   },
   "tasks": {
-    "start": "deno run --watch --allow-net --allow-read --allow-write --allow-env ./serve.ts"
+    "start": "deno run --watch --allow-net --allow-read --allow-write --allow-env ./build/serve.ts"
   }
 }
