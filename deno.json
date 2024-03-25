@@ -17,6 +17,6 @@
   },
   "tasks": {
     "start": "deno run --watch --allow-net --allow-read --allow-write --allow-env ./build/serve.ts",
-    "build": "deno run --allow-read --allow-write --allow-env ./build/build.ts"
+    "build": "deno run --allow-net --allow-read --allow-write --allow-env ./build/build.ts"
   }
 }
