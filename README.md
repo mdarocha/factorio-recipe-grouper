@@ -24,4 +24,4 @@ Run:
 $ deno task build
 ```
 
-This will overwrite the files in the `./src` directory with versions that are ready for static hosting.
+This will write to the `./src` directory files that are ready for static hosting.
