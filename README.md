@@ -1,7 +1,7 @@
 # Factorio Recipe Grouper
 
 This tool allows you to group Factorio recipes by their inputs. It may be helpful sometimes when designing factory sectiond.
-It uses recipe data from [factoriolab](https://github.com/factoriolab/factoriolab)
+It uses recipe data from [factoriolab](https://github.com/factoriolab/factoriolab).
 
 ## Getting started
 
